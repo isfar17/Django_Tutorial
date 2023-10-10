@@ -1,0 +1,1 @@
+go to admin.py and modify the AdminView class with a new class. fieldsets or field attributes are used to change the look and override

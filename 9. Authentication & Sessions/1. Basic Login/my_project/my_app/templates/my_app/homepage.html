@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+</head>
+<body>
+    <h1>Hello this is the homepage, if you are not logged in please login at /login url</h1>
+
+    {% if user.is_authenticated %}
+           <a href="{% url 'my_app:logout_user' %}">Logout</a>
+    {% else %}
+        <a href="{% url 'my_app:loginpage' %}">Login</a>
+        <a href="{% url 'my_app:restricted' %}">Go to the restricted page</a>
+        
+    {% endif %}
+</body>
+</html>

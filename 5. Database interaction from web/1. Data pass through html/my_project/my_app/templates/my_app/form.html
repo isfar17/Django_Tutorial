@@ -1,0 +1,22 @@
+{% extends 'my_app/base.html' %} <!--NOT my_app/base.html, because we are inheriting from template folder outside of app-->
+
+{% block title %} Form {% endblock %}
+
+  {% block body %}
+  <h1>Hello, world! This is the index base page</h1>
+
+  <form method="post" action="">
+    {% csrf_token %}
+  <div class="forms">
+      <div class="input-group mb-3"> 
+          <input type="text" class="form-control" placeholder="Name" aria-label="Name" name="name" aria-describedby="basic-addon1">
+        </div>
+      <div class="input-group mb-3"> 
+          <input type="text" class="form-control" placeholder="Age" aria-label="Age" name="age" aria-describedby="basic-addon1">
+        </div>
+
+  </div>
+  <button type="submit">Submit</button>
+  </form>
+  
+  {% endblock  %}

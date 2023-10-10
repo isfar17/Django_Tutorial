@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=`, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello World</h1>
+    We are currently at page : {{page.number}}
+
+    <ul>
+    {% for object  in page.object_list %}<!--default format is to use object_list.-->
+
+        <li>Name + Age: {{object.name}} + {{object.age}}</li>
+    {% endfor %}
+        <br>
+<!-- This is the code for linking the other pages. Flask has around same type-->
+    {% if page.has_previous %}
+
+    <a href="{% url 'index' %}?page={{page.previous_page_number}}">Previous Page</a> &nbsp;
+        
+    {% endif %}
+
+    {% if page.has_next %}
+    <a href="{% url 'index' %}?page={{page.next_page_number}}">Next Page</a>
+        
+    {% endif %}
+</ul>
+</body>
+</html>

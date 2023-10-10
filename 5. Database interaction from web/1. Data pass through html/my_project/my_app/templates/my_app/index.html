@@ -1,0 +1,16 @@
+{% extends 'my_app/base.html' %}
+
+{% block title %}Index{% endblock %}
+
+{% block body %}
+
+This is the index page , go to <a href="{% url 'my_app:form' %}">FORM</a> page to fill-sup and see data here
+<br>
+
+<ol>
+{% for i in data %}
+    <li>{{i.name}} -{{i.age}}</li>
+{% endfor %}
+</ol>
+
+{% endblock %}
