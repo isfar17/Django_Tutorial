@@ -10,3 +10,10 @@ Setup all the views. in index.html file import model and send all the data in di
 request data, and save the field data in variables. last try to save it in model and redirect user as per input. 
 
 5. finally run the server and check if all works fine.
+
+request form print:
+[12/Oct/2023 12:45:32] "GET / HTTP/1.1" 200 914
+[12/Oct/2023 12:46:31] "GET /form HTTP/1.1" 200 1317
+<QueryDict: {'csrfmiddlewaretoken': ['mH8M9Qo7mJe0c6j5m1h6AHG3ta5SX2hwjgMl5yB3l1syYOsY4eHKjnncVP8LvEbF'], 'name': ['Anna Hen'], 'age': ['30']}>
+[12/Oct/2023 12:46:53] "POST /form HTTP/1.1" 302 0
+[12/Oct/2023 12:46:53] "GET / HTTP/1.1" 200 941

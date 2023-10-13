@@ -10,4 +10,5 @@ urlpatterns=[
     path("list",views.DemoListView.as_view(),name="listview"),
     path("update/<int:pk>",views.UpdateDemoView.as_view(),name="updateview"), #here by default we have to pass primary key
     path("detail/<int:pk>",views.DetailDemoView.as_view(),name="detailview"), #here by default we have to pass primary key
+    path("delete/<int:pk>",views.DeleteDemoView.as_view(),name="deleteview"), #here by default we have to pass primary key
         ]   

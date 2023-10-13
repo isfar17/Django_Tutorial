@@ -2,7 +2,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from django.urls import reverse_lazy
 
-from django.views.generic import TemplateView,FormView,CreateView,ListView,UpdateView,DetailView
+from django.views.generic import TemplateView,FormView,CreateView,ListView,UpdateView,DetailView,DeleteView
 
 from .forms import DemoForm
 from .models import Demo
@@ -50,4 +50,12 @@ class UpdateDemoView(UpdateView):
 class DetailDemoView(DetailView):
     #template name = "modelname_detail.html"
     model=Demo
+    
+    
+class DeleteDemoView(DeleteView):
+    # template format for confirmation asking : modelname_confirm_delete.html
+    #same as create view 
+    model=Demo
+    
+    success_url=reverse_lazy("my_app:listview") #will take me to the /list where all data is listed
     
