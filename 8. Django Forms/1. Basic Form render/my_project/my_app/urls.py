@@ -5,5 +5,5 @@ app_name="my_app"
 
 urlpatterns=[
     path("",views.index,name="index"),
-    path("form",views.thankyou,name="thankyou")
+    path("thank",views.thankyou,name="thankyou")
 ]   
