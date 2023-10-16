@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List</title>
+</head>
+<body>
+    <table border="2px">
+        <tr>
+            <td>Name</td>
+            <td>Address</td>
+            <td>Image</td>
+        </tr>
+        {% for data in all_data  %}
+            <tr>
+                <td>{{data.name}}</td>
+                <td>{{data.address}}</td>
+                <!-- <td>{{data.image}}</td> -->
+                <td> <img src="/media/{{data.image}}" alt="{{data.image}}" style="height: 100px; width:100px"> </td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

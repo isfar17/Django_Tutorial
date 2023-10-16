@@ -116,9 +116,15 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
+import os
 
 STATIC_URL = 'static/'
 
+STATICFILES_DIRS = [  #all the directories where the files are located
+    BASE_DIR / "static",
+    'static',            
+]
+STATIC_ROOT = os.path.join(BASE_DIR,'copied_assets')#copies all the static files of all apps in the folder to serve them faster
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 

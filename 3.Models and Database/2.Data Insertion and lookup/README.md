@@ -71,4 +71,10 @@ Out[6]: <Base: Base object (2)>
 
 In [7]: Base.objects.bulk_create([Base(first_name="New",last_name="User"),Base(first_name="Mahir",last_name="Shafiq")])
 Out[7]: [<Base: Base object (3)>, <Base: Base object (4)>]
+
+In [8: data={"first_name": "Mohsin","last_name": "Khan"}
+
+In [9]: Base.objects.create(**data) #Third way to save data from json format
+Out[9]: <Base: Base object (3)>
+
 ```
